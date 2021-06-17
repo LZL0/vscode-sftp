@@ -113,7 +113,7 @@ function getConfigPath(basePath) {
 }
 
 export function validateConfig(config) {
-  const { error } = Joi.validate(config, configScheme, {
+  const { error } = configScheme.validate(config, {
     allowUnknown: true,
     convert: false,
     language: {
